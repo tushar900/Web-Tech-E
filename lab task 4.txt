@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<body>
+
+
+<nav class="w3-bar w3-black">
+  <a href="#home" class="w3-button w3-bar-item">Home</a>
+  <a href="#Login" class="w3-button w3-bar-item">Login</a>
+   <a href="#Registration" class="w3-button w3-bar-item">Registration</a>
+</nav>
+
+
+<h3>Registration</h3>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="ename">Email:</label>
+  <input type="text" id="ename" name="ename"><br><br>
+ 
+</form>
+
+<div class="col-lg-6">
+<h3>Registration Form</h3>
+<form action="validation php" method"post">
+<div class=form-group>
+<label>Name</label>
+<input type="text" name="user" class="form-control">
+</div>
+<div class=form-group>
+<label>Email</label>
+<input type="Email" name="Email" class="form-control">
+</div>
+
+
+<div class=form-group>
+<label>Username</label>
+<input type="text" name="user" class="form-control">
+</div>
+<div class=form-group>
+<label>Password</label>
+<input type="Password" name="password" class="form-control"><br>
+<label>Confirm Password</label>
+<input type="Password" name="password" class="form-control"><br>
+<lable>Gender</label>
+
+
+<input type="radio" name="User" value="Male">Male<br>
+<input type="radio" name="User" value="Female">Female<br>
+<input type="radio" name="User" value="Other">Other<br>
+<label>Date of Birth</label>
+<input type="button" name="user">
+<input type="button" name="user">
+<input type="button" name="user">
+
+</div>
+<button class="btn btn-primary">Login</button>
+<button class="btn btn-primary">Reset</button>
+
+
+
+</form>
+
+
+
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<h3>Login Form</h3>
+<form action="validation php" method"post">
+<div class=form-group>
+<label>Username</label>
+<input type="text" name="user" class="form-control">
+</div>
+<div class=form-group>
+<label>Password</label>
+<input type="Password" name="password" class="form-control">
+</div>
+<input type ="button">Remember me</button><br>
+<button class="btn btn-primary">Submit</button>
+<p>Forget Password?</p>
+
+<div class =form-group>
+<label>Forgot Password</label><br>
+
+<label>Enter Email</label>
+<input type="Email" name="Email" class="form-control">
+</div>
+<button class="btn btn-primary">Submit</button>
+
+<div class=form-group>
+<h3 style="text align:center;">Profile</h3>
+<img src="download.png"" width="150" height="100"><br>
+<input class="form-control" type="file" name ="file"><br>
+
+<label>Name:</label>
+<input type="text" name="user" class="form-control">
+</div>
+<div class=form-group>
+<label>Email:</label>
+<input type="Email" name="Email" class="form-control"><br>
+<label>Gender:</label>
+<input type="text" name="user" class="form-control"><br>
+<label>Date Of Birth:</label>
+<input type="text" name="user" class="form-control"><br>
+<button class="btn btn-primary">Edit profile</button>
+
+<div class=form-group>
+<h3 style="text align:center;">Edit Profile</h3>
+<img src="download.png"" width="150" height="100"><br>
+<input class="form-control" type="file" name ="file"><br>
+
+<label>Name:</label>
+<input type="text" name="user" value="Sazzad Hossain"class="form-control">
+</div>
+<div class=form-group>
+<label>Email:</label>
+<input type="Email" name="Email" value="" class="form-control"><br>
+<label>Gender:</label>
+<input type="text" name="user" value="Male" class="form-control"><br>
+<label>Date Of Birth:</label>
+<input type="text" name="user" value="15/03/1998" class="form-control"><br>
+<button class="btn btn-primary">Submit</button>
+
+<div class=form-group>
+
+<h3 style="text align:center;">Change Password</h3>
+
+<label>Current Password</label>
+<input type="Password" name="password" class="form-control"><br>
+<label>New Password</label>
+<input type="Password" name="password" class="form-control"><br>
+<label>Re-type Password</label>
+<input type="Password" name="password" class="form-control"><br>
+<button class="btn btn-primary">Submit</button>
+</div>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+<html>
