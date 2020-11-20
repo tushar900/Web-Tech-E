@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>  
+<html>
+<head>
+<style>
+.error {color: #FF0000;}
+</style>
+</head>
+<body>  
+<?php
+
+$NameErr = $Buying priceErr = $Selling priceErr= $DisplayErr = $DisplayErr = $BgErr="";
+$name= $Buying price= $Display= $Buying Price= $Selling price= $Display="";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed";
+    }
+  }
+  
+  if (empty($_POST["buying price"])) {
+    $buying priceErr = "Buying price is required";
+  } else {
+    $buying price = test_input($_POST["buying price"]);
+    // check if buying price is well-formed
+    if (!filter_var($buying price,FILTER_VALIDATE_Buying Price) {
+      $buying priceErr = "Invalid buying price format";
+    }
+  }
+
+  if (empty($_POST["selling price"])) {
+    $selling priceErr = "Selling price is required";
+  } else {
+    $selling price = test_input($_POST["selling price"]);
+    // check if selling price is well-formed
+    if (!filter_var($selling price, FILTER_VALIDATE_Selling Price)) {
+      $selling priceErr = "Invalid selling price format";
+    }
+  }
+    
+  if (empty($_POST["Display"])) {
+    $Display = "";
+  } else {
+    $Display = test_input($_POST["Display"]);
+    // check if URL address syntax is valid
+    if (!preg_match("/^[1-31 1-12-' ]*$/",$Display)) {
+      $DisplayErr = "Cannot be empty";
+    }    
+  }
+ if (empty($_POST["Bg"])) {
+    $BgErr = "Must be selected";
+  } else {
+    $Bg = test_input($_POST["Bg"]);
+   }
+}
+
+ 
+  
+  
+  
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+<h2>Company</h2>
+<p><span class="error">* required field</span></p>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);">  
+  Name: <input type="text" name="name">
+   <span class="error">* <?php echo $nameErr;?></span>
+  <br><br>
+  Buying price: <input type="Text" name="buying price">
+ <span class="error">* <?php echo $nameErr;?></span>
+  <br><br>
+  Selling price: <input type="Text" name="Selling price">
+ <span class="error">* <?php echo $nameErr;?></span>
+  <br><br>
+  Display: <input type="Button" name="dd"/>
+  
+ 
+  <span class="error"><?php echo $DisplayErr;?></span>
+  <br><br>
+
+  <input type="submit" name="submit" value="Save"> <br>
+
+  
+  <h2>DISPLAY:</h2>
+                  <table border ="1"> <tr><th>NAME</th><th>PROFIT</th>
+                    </tr>
+                    <tr><td>Samsung</td><td>5000</td><td>edit</td><td>delete</td></tr>
+                    <tr><td>Nokia</td><td>1500</td><td>edit</td><td>delete</td></tr>
+                     <tr><td>Xaomi</td><td>3000</td><td>edit</td><td>delete</td></tr>
+                    </table>
+  
+  
+  <br><br>
+
+  <h2>EDIT PRODUCT:</h2>
+
+  
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);">  
+  Name: <input type="text" name="name">
+  <span class="error"> <?php echo $nameErr;?></span>
+  <br><br>
+  
+  Buying price: <input type="Text" name="buying price">
+ <span class="error"> <?php echo $nameErr;?></span>
+  <br><br>
+  Selling price: <input type="Text" name="Selling price">
+ <span class="error"> <?php echo $nameErr;?></span>
+  <br><br>
+  Display: <input type="Button" name="dd"/>
+  
+ 
+  <span class="error"><?php echo $DisplayErr;?></span>
+  <br><br>
+
+  <input type="submit" name="submit" value="Save"> <br>
+
+  <h2>Delete Product:</h2>
+  Name: <input type="text" name="Samsung"> <br>
+  <span class="error"> <?php echo $nameErr;?></span>
+  <br><br>
+  
+  Buying price: <input type="Text" name="buying price">
+ <span class="error"> <?php echo $nameErr;?></span>
+  <br><br>
+  Selling price: <input type="Text" name="Selling price">
+ <span class="error"> <?php echo $nameErr;?></span>
+  <br><br>
+  Displayable: <input type="Button" />
+  
+ 
+  <span class="error"><?php echo $DisplayErr;?></span>
+  <br><br>
+
+  <input type="submit" name="submit" value="Delete"> <br>
+
+  <h2>Search:</h2>
+   Search by Name<input type="text" name=" search by name"> <br>
+
+  <table border ="1"> <tr><th>NAME</th><th>PROFIT</th>
+                    </tr>
+                    <tr><td>Samsung</td><td>5000</td><td>edit</td><td>delete</td></tr>
+                    <tr><td>Nokia</td><td>1500</td><td>edit</td><td>delete</td></tr>
+                     <tr><td>Xaomi</td><td>3000</td><td>edit</td><td>delete</td></tr>
+                    </table>
+  
+  
+  <br><br>
+
+  
+ 
+
+</body>
+</html>
